@@ -4,20 +4,31 @@ import './App.css';
 import classNames from 'classnames';
 
 function App() {
-  let imgHorizLine = classNames('imgHorizLine', "col-sm-9");
+  let imgHorizLine = classNames('imgHorizLine', "col-lg-9");
   let container = classNames('container', 'row');
-  let imgContainer = classNames('col-sm-6', 'imgContainer');
+  let imgContainer = classNames('col-lg-6', 'imgContainer');
 
   return (
     <div className="main">
       <div className = "headera">
         <h2>
-          Filler Text
+          <span>Filler Text</span>
         </h2>
         <div className = "line"/>
     </div>
+
+
+    <div className = "gridCont">
+      <div>
+        text
+      </div>
+      <div>
+        image
+      </div>
+    </div>
+
     <div className={container}>
-      <p className="col-sm-6">
+      <p className="col-lg-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat
       </p >
       <div className={imgContainer}>

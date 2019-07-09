@@ -2,34 +2,42 @@
 
 }
 
-/* .headera{
-  vertical-align: center;
 
-} */
+
+.gridCont{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*HEADER STUFF */
+
+.headera{
+  padding: 20px;
+}
+
 
 h2{
-  /* float: left; */
-  width: 250px;
-  height: 100px;
-  position:relative;
+  position:relative; /*allows the 'top 50%' in after to work*/
+  z-index: -2;
+
 }
 
 h2::after{
-  /* border-top: 2px solid #dfdfdf; */
          content:"";
-         width: 60px;
-         height: 1px;
-         background:gray;
+         display: block;
+         width: 500px;
+         height: 2px;
+         background: black;
          position: absolute;
-         /* top: 50%; left: 0; right: 0; bottom: 0; */
-         bottom: -4px;
+         top: 50%;
+         z-index: -2;
 
 }
 
-/* .line{
-  background-color: black;
-  height: 1px;
-  width: 400px;
-  float: left;
+span{ /*is in front of line*/
+  background: white;
+  padding-right: 20px; /*adds space after header for horizline*/
 }
-*/
+
+
+/*HEADER STUFF */
