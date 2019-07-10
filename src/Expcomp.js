@@ -9,6 +9,7 @@ const Expcomp = (props) => {
     <div className = "contentgrid">
       <div className = "contentCont">
         <h1>{props.title}</h1>
+        <h2>{props.info}</h2>
         <p>{props.text}</p>
       </div>
       <div>

@@ -1,3 +1,16 @@
+.expmain{
+  height: 100vh;
+
+}
+
+.biggestCont{
+  position: absolute;
+  width: 80vw;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 img:hover {
   -webkit-backface-visibility: hidden;
   -ms-transform: translateZ(0); /* IE 9 */
@@ -10,9 +23,8 @@ img:hover {
 
 
 .contentCont {
-  background-color: black;
+  background-color: #282828;
   color: white;
-  transition: all 2s;
 }
 
 .contentgrid{
@@ -22,6 +34,7 @@ img:hover {
 
 .overarch {
   display: inline-block;
+  position: relative;
 }
 
 .imgcontainer {
@@ -29,9 +42,14 @@ img:hover {
   height: 110px;
   background-color: black;
   display: inline-block;
-  /* transition: height 2s; */
   animation-name: asdf;
   animation-duration: 2s;
+  position: relative;
+  transition: background-color 1000ms linear;
+}
+
+.imgcontainer:hover{
+  background-color: white;
 }
 
 @keyframes asdf {
@@ -43,4 +61,6 @@ img:hover {
   width: 100px;
   height: 100px;
   background-color: red;
+  margin: 0 auto;
+
 }

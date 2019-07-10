@@ -69,13 +69,13 @@ p{
 }
 
 
-h2{
+.headerName{
   position:relative; /*allows the 'top 50%' in after to work*/
   z-index: -2;
 
 }
 
-h2::after{
+.headerName::after{
          content:"";
          display: block;
          width: 500px;
@@ -94,3 +94,74 @@ span{ /*is in front of line*/
 
 
 /*HEADER STUFF */
+
+
+/*EXPERIENCE STUFF */
+
+.expmain{
+  height: 100vh;
+  position: relative;
+
+}
+
+.biggestCont{
+  position: absolute;
+  width: 80vw;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img:hover {
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+  transform: scale(1.05);
+  transition: transform .5s;
+  animation-name: slideUp;
+}
+
+
+.contentCont {
+  background-color: #282828;
+  color: white;
+}
+
+.contentgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.overarch {
+  display: inline-block;
+  position: relative;
+}
+
+.imgcontainer {
+  width: 110px;
+  height: 110px;
+  background-color: black;
+  display: inline-block;
+  animation-name: asdf;
+  animation-duration: 2s;
+  position: relative;
+  transition: background-color 1000ms linear;
+}
+
+.imgcontainer:hover{
+  background-color: white;
+}
+
+@keyframes asdf {
+  from{height: 0px;}
+  to{height: 110px;}
+}
+
+.imagehold {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 0 auto;
+
+}
