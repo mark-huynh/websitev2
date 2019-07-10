@@ -9,7 +9,7 @@ function About() {
       <div className = "globalContain">
       <div className = "headera">
         <h2 className = "headerName">
-          <span>About Me</span>
+          <span className = "whiteSpace">About Me</span>
         </h2>
         <div className = "line"/>
     </div>
@@ -18,7 +18,31 @@ function About() {
     <div className = "gridCont">
       <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat
+        <span className = "greeting"> Hey! </span>
+          My name is Mark Huynh and I am a student studying Electrical/Computer
+          Engineering (ECE) with a huge passion for learning Computer Science at
+          every chance I get. Academic courses alone have never satisfied my enthusiasm
+          for both hardware and software and I often find myself tackling random
+          projects (such as this website) strictly out of curiousity and to expand
+          my breath in ECE/CS.
+            <br></br><br></br>
+          I am a huge advocate for <i>learning through doing</i> and I openly welcome
+          any opportunity that comes my way. Relevant tools I have been working with
+          include:
+
+          
+          <ul>
+            <li>C++/C/Java/Python</li>
+            <li>ReactJS and Node.js</li>
+            <li>HTML/CSS/JS</li>
+          </ul>
+
+          <ul>
+            <li>SystemVerilog</li>
+            <li>Arduino/Microcontrollers</li>
+            <li>Digital Logic and Design</li>
+          </ul>
+
         </p >
       </div>
       <div className = "imgdiv">

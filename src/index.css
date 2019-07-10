@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
 .main{
   height: 100vh;
   position: relative;
@@ -16,6 +19,8 @@
 
 p{
   animation: fadein .2s;
+  font-family: Hind;
+  font-size: 150%;
 }
 
 @keyframes fadein {
@@ -30,12 +35,17 @@ p{
   padding: 0px 100px 0 100px;
 }
 
+.greeting {
+  font-family: Comfortaa;
+  font-size: 120%;
+}
+
 .imgdiv{
   text-align: center;
   position: relative;
 }
 
-
+/*
 .imgdiv::after{
   content: '';
   width: 1px;
@@ -43,9 +53,9 @@ p{
   background: black;
   position: absolute;
   left: 40px;
-}
+} */
 
-.imgdiv::before{
+/* .imgdiv::before{
   content: '';
   width: 80%;
   height: 1px;
@@ -55,7 +65,7 @@ p{
   left: 0px;
   animation-name: horizStretch;
   animation-duration: 2s;
-}
+} */
 
 @keyframes horizStretch {
   from {width: 0%;}
@@ -72,7 +82,6 @@ p{
 .headerName{
   position:relative; /*allows the 'top 50%' in after to work*/
   z-index: -2;
-
 }
 
 .headerName::after{
@@ -87,7 +96,7 @@ p{
 
 }
 
-span{ /*is in front of line*/
+.whiteSpace{ /*is in front of line*/
   background: white;
   padding-right: 20px; /*adds space after header for horizline*/
 }
