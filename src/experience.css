@@ -1,0 +1,46 @@
+img:hover {
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+  transform: scale(1.05);
+  transition: transform .5s;
+  animation-name: slideUp;
+}
+
+
+.contentCont {
+  background-color: black;
+  color: white;
+  transition: all 2s;
+}
+
+.contentgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.overarch {
+  display: inline-block;
+}
+
+.imgcontainer {
+  width: 110px;
+  height: 110px;
+  background-color: black;
+  display: inline-block;
+  /* transition: height 2s; */
+  animation-name: asdf;
+  animation-duration: 2s;
+}
+
+@keyframes asdf {
+  from{height: 0px;}
+  to{height: 110px;}
+}
+
+.imagehold {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
