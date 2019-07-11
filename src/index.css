@@ -1,6 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech');
 
+/*GLOBAL*/
+
+  /*HEADER STUFF */
+
+  .headera{
+    padding: 20px;
+  }
+
+
+  .headerName{
+    position:relative; /*allows the 'top 50%' in after to work*/
+    z-index: -2;
+  }
+
+  .headerName::after{
+    content:"";
+    display: block;
+    width: 500px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    z-index: -2;
+
+  }
+
+  .whiteSpace{ /*is in front of line*/
+    background: white;
+    padding-right: 20px; /*adds space after header for horizline*/
+  }
+
+
+/*HEADER STUFF */
+
+/*GLOBAL*/
+
+/*ABOUT ME */
 .main{
   height: 100vh;
   position: relative;
@@ -14,8 +52,6 @@
   transform: translate(-50%, -50%);
 }
 
-.body {
-}
 
 p{
   animation: fadein .2s;
@@ -41,30 +77,29 @@ p{
 }
 
 .imgdiv{
-  text-align: center;
   position: relative;
 }
 
 /*
 .imgdiv::after{
-  content: '';
-  width: 1px;
-  height: 100%;
-  background: black;
-  position: absolute;
-  left: 40px;
+content: '';
+width: 1px;
+height: 100%;
+background: black;
+position: absolute;
+left: 40px;
 } */
 
 /* .imgdiv::before{
-  content: '';
-  width: 80%;
-  height: 1px;
-  background: black;
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  animation-name: horizStretch;
-  animation-duration: 2s;
+content: '';
+width: 80%;
+height: 1px;
+background: black;
+position: absolute;
+top: 10px;
+left: 0px;
+animation-name: horizStretch;
+animation-duration: 2s;
 } */
 
 @keyframes horizStretch {
@@ -72,37 +107,30 @@ p{
   to {width: 80%;}
 }
 
-/*HEADER STUFF */
-
-.headera{
-  padding: 20px;
+.skillsGrid{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  padding: 10px;
 }
 
-
-.headerName{
-  position:relative; /*allows the 'top 50%' in after to work*/
-  z-index: -2;
+.skillsGrid span{
+  font-style: italic;
 }
 
-.headerName::after{
-         content:"";
-         display: block;
-         width: 500px;
-         height: 1px;
-         background: black;
-         position: absolute;
-         top: 50%;
-         z-index: -2;
+.imgdiv{
+  position: relative;
 
 }
 
-.whiteSpace{ /*is in front of line*/
-  background: white;
-  padding-right: 20px; /*adds space after header for horizline*/
+.headshot{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
-
-
-/*HEADER STUFF */
+/*ABOUT ME */
 
 
 /*EXPERIENCE STUFF */
@@ -121,25 +149,43 @@ p{
   transform: translate(-50%, -50%);
 }
 
-img:hover {
+/* img:hover {
   -webkit-backface-visibility: hidden;
-  -ms-transform: translateZ(0); /* IE 9 */
-  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   transform: scale(1.05);
   transition: transform .5s;
   animation-name: slideUp;
-}
+} */
 
 
 .contentCont {
   background-color: #282828;
   color: white;
+  height: auto;
+  font-family: Hind;
 }
+
+.contentCont div{
+  padding: 30px;
+}
+
+.contentCont h2{
+  font-family: Share Tech;
+  font-size: 125%
+}
+
+.contentCont p{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
 
 .contentgrid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60% 40%;
 }
 
 .overarch {
@@ -150,9 +196,9 @@ img:hover {
 .imgcontainer {
   width: 110px;
   height: 110px;
-  background-color: black;
+  background-color: blue;
   display: inline-block;
-  animation-name: asdf;
+  /* animation-name: asdf; */
   animation-duration: 2s;
   position: relative;
   transition: background-color 1000ms linear;
@@ -164,13 +210,67 @@ img:hover {
 
 @keyframes asdf {
   from{height: 0px;}
-  to{height: 110px;}
+  to{height: 100px;}
 }
 
 .imagehold {
   width: 100px;
   height: 100px;
   background-color: red;
-  margin: 0 auto;
+  position: absolute;
+  animation-name: asdf;
+  animation-duration: 2s;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  bottom: 0;
 
 }
+
+
+.exppiccont{
+  position: relative;
+}
+
+.exppiccont div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconbar{
+  margin: 0;
+  height: 120px;
+}
+
+.iconcont{
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  background-color: blue;
+  position: relative;
+}
+
+.iconcont img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heightAnimate{
+  height: 10px;
+  width: 120px;
+  background-color: black;
+  transition: height 2s;
+  position: absolute;
+  bottom: 0;
+  /* z-index: 1; */
+}
+
+.heightAnimate:hover{
+  height: 120px;
+}
+
+/*EXPERIENCE STUFF */

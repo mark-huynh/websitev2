@@ -30,23 +30,25 @@ function About() {
           any opportunity that comes my way. Relevant tools I have been working with
           include:
 
-          
-          <ul>
+<div className = "skillsGrid">
+
+          <ul><span>Software</span>
             <li>C++/C/Java/Python</li>
             <li>ReactJS and Node.js</li>
             <li>HTML/CSS/JS</li>
           </ul>
 
-          <ul>
+          <ul><span>Hardware</span>
             <li>SystemVerilog</li>
             <li>Arduino/Microcontrollers</li>
             <li>Digital Logic and Design</li>
           </ul>
 
+        </div>
         </p >
       </div>
       <div className = "imgdiv">
-          <img className="headshot" src={headshot} width='400' />
+          <img className="headshot" src={headshot} width='500' />
       </div>
     </div>
 </div>
