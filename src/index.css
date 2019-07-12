@@ -25,6 +25,8 @@
     position: absolute;
     top: 50%;
     z-index: -2;
+    animation-name: horizStretch2;
+    animation-duration: 1.5s;
 
   }
 
@@ -54,15 +56,19 @@
 
 
 p{
-  animation: fadein .2s;
+  /* animation: fadein .2s; */
   font-family: Hind;
   font-size: 150%;
 }
 
-@keyframes fadein {
-  from{opacity: 0;}
-  to{opacity: 1;}
+/* .headshot{
+  animation:fadein 1.5s;
 }
+
+@keyframes fadein {
+  from{opacity: 0; transform: translate(0px, 0px);}
+  to{opacity: 1;}
+} */
 
 .gridCont{
   display: grid;
@@ -80,7 +86,7 @@ p{
   position: relative;
 }
 
-/*
+
 .imgdiv::after{
 content: '';
 width: 1px;
@@ -88,24 +94,36 @@ height: 100%;
 background: black;
 position: absolute;
 left: 40px;
-} */
+animation-name: vertStretch;
+animation-duration: 1.5s;
+bottom:0;
+}
 
-/* .imgdiv::before{
+.imgdiv::before{
 content: '';
-width: 80%;
+width: 100%;
 height: 1px;
 background: black;
 position: absolute;
-top: 10px;
-left: 0px;
+top: 20px;
+right: 0;
 animation-name: horizStretch;
-animation-duration: 2s;
-} */
+animation-duration: 1.5s;
+}
 
 @keyframes horizStretch {
   from {width: 0%;}
-  to {width: 80%;}
+  to {width: 100%;}
 }
+@keyframes horizStretch2 {
+  from {width: 0px;}
+  to {width: 500px;}
+}
+@keyframes vertStretch {
+  from {height: 0%;}
+  to {height: 100%;}
+}
+
 
 .skillsGrid{
   display: grid;
@@ -120,14 +138,24 @@ animation-duration: 2s;
 
 .imgdiv{
   position: relative;
+  text-align: center;
+  white-space: nowrap;
 
 }
 
+.jbbSiV{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.helper{
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .headshot{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  vertical-align: middle;
 
 }
 /*ABOUT ME */
@@ -188,30 +216,7 @@ animation-duration: 2s;
   grid-template-columns: 60% 40%;
 }
 
-.overarch {
-  display: inline-block;
-  position: relative;
-}
 
-.imgcontainer {
-  width: 110px;
-  height: 110px;
-  background-color: blue;
-  display: inline-block;
-  /* animation-name: asdf; */
-  animation-duration: 2s;
-  position: relative;
-  transition: background-color 1000ms linear;
-}
-
-.imgcontainer:hover{
-  background-color: white;
-}
-
-@keyframes asdf {
-  from{height: 0px;}
-  to{height: 100px;}
-}
 
 .imagehold {
   width: 100px;
@@ -220,9 +225,6 @@ animation-duration: 2s;
   position: absolute;
   animation-name: asdf;
   animation-duration: 2s;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
   bottom: 0;
 
 }
@@ -248,7 +250,6 @@ animation-duration: 2s;
   height: 120px;
   width: 120px;
   display: inline-block;
-  background-color: blue;
   position: relative;
 }
 
@@ -262,15 +263,11 @@ animation-duration: 2s;
 .heightAnimate{
   height: 10px;
   width: 120px;
-  background-color: black;
-  transition: height 2s;
+  background-color: #282828;
+  transition: height 1s;
   position: absolute;
   bottom: 0;
-  /* z-index: 1; */
-}
-
-.heightAnimate:hover{
-  height: 120px;
+  z-index: -1;
 }
 
 /*EXPERIENCE STUFF */

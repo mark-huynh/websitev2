@@ -2,7 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import headshot from './photos/headshot1.JPG';
 
+import { fadeInDown, fadeInUp } from 'react-animations'
+import styled, { keyframes } from 'styled-components';
+
 function About() {
+
+  const FadeInUp = styled.div`animation: .5s ${keyframes`${fadeInUp}`}`;
+  const FadeInDown = styled.div`animation: 1.5s ${keyframes`${fadeInDown}`}`;
 
   return (
     <div className="main">
@@ -19,6 +25,7 @@ function About() {
       <div>
         <p>
         <span className = "greeting"> Hey! </span>
+        <FadeInUp>
           My name is Mark Huynh and I am a student studying Electrical/Computer
           Engineering (ECE) with a huge passion for learning Computer Science at
           every chance I get. Academic courses alone have never satisfied my enthusiasm
@@ -45,10 +52,14 @@ function About() {
           </ul>
 
         </div>
+      </FadeInUp>
         </p >
       </div>
       <div className = "imgdiv">
+        <div className = "helper"></div>
+        <FadeInDown>
           <img className="headshot" src={headshot} width='500' />
+        </FadeInDown>
       </div>
     </div>
 </div>
