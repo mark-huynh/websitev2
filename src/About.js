@@ -2,13 +2,23 @@ import React from 'react';
 import classNames from 'classnames';
 import headshot from './photos/headshot1.JPG';
 
+import {LoadItem} from './animations.js';
 import { fadeInDown, fadeInUp } from 'react-animations'
 import styled, { keyframes } from 'styled-components';
 
-function About() {
+const FadeInUp = styled.div`animation: .5s ${keyframes`${fadeInUp}`}`;
+const FadeInDown = styled.div`animation: 1.5s ${keyframes`${fadeInDown}`}`;
 
-  const FadeInUp = styled.div`animation: .5s ${keyframes`${fadeInUp}`}`;
-  const FadeInDown = styled.div`animation: 1.5s ${keyframes`${fadeInDown}`}`;
+
+class About extends React.Component {
+
+state = {isVisible: false};
+
+componentDidMount(){
+  this.setState({isVisible: !this.state.isVisible});
+}
+
+render(){
 
   return (
     <div className="main">
@@ -25,7 +35,8 @@ function About() {
       <div>
         <p>
         <span className = "greeting"> Hey! </span>
-        <FadeInUp>
+
+          {/*<LoadItem pose = {this.state.isVisible ? 'visible' : 'hidden'}>*/}
           My name is Mark Huynh and I am a student studying Electrical/Computer
           Engineering (ECE) with a huge passion for learning Computer Science at
           every chance I get. Academic courses alone have never satisfied my enthusiasm
@@ -52,7 +63,7 @@ function About() {
           </ul>
 
         </div>
-      </FadeInUp>
+        {/*</LoadItem>*/}
         </p >
       </div>
       <div className = "imgdiv">
@@ -66,6 +77,7 @@ function About() {
       </div>
 
 );
+}
 
 }
 

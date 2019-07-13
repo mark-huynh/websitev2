@@ -271,3 +271,30 @@ animation-duration: 1.5s;
 }
 
 /*EXPERIENCE STUFF */
+
+
+/*Project Stuff*/
+
+.carddiv{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+}
+
+.cardpics img{
+  position: absolute;
+  top:0;
+  width: auto;
+  height: auto;
+}
+
+.staticimg{
+  z-index: 1;
+}
+
+.staticimg:hover{
+  opacity: 0;
+}
+
+
+/*Project Stuff*/
