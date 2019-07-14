@@ -32,7 +32,7 @@ render(){
 
 
     <div className = "gridCont">
-      <div>
+      <div className = "contdiv">
         <p>
         <span className = "greeting"> Hey! </span>
 
@@ -69,7 +69,7 @@ render(){
       <div className = "imgdiv">
         <div className = "helper"></div>
         <FadeInDown>
-          <img className="headshot" src={headshot} width='500' />
+          <img className="headshot" src={headshot}/>
         </FadeInDown>
       </div>
     </div>
