@@ -12,3 +12,16 @@ export const LoadItem = posed.div({
   y: -10,
   transition: { duration: 300 }
 }});
+
+export const ProjectLoad = posed.div({
+  open: {
+    delayChildren: 200,
+    staggerChildren: 300
+  },
+  closed: {delay: 300 }
+});
+
+export const ProjectItem = posed.div({
+  open: { y: 0, opacity: 1 },
+  closed: { y: 20, opacity: 0 }
+})
