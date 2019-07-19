@@ -254,22 +254,12 @@ animation-duration: 1.5s;
 }
 
 .biggestCont{
-  position: absolute;
+  /* position: absolute;
   width: 80vw;
   top:50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
-
-/* img:hover {
-  -webkit-backface-visibility: hidden;
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  transform: scale(1.05);
-  transition: transform .5s;
-  animation-name: slideUp;
-} */
 
 
 .contentCont {
@@ -294,36 +284,38 @@ animation-duration: 1.5s;
   padding: 20px;
 }
 
-
-.contentgrid{
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
-
-
-
-.imagehold {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: absolute;
-  animation-name: asdf;
-  animation-duration: 2s;
-  bottom: 0;
-
-}
-
-
 .exppiccont{
   position: relative;
+  text-align: center;
 }
 
-.exppiccont div{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.exppiccont img{
+  height: 200px;
 }
+
+@media (min-width: 1500px) {
+
+  .contentgrid{
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+
+  .exppiccont div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .exppiccont img{
+    width: 100%;
+  }
+}
+
+
 
 .iconbar{
   margin: 0;

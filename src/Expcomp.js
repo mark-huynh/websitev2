@@ -16,8 +16,8 @@ const Expcomp = (props) => {
       </div>
       <div className = "exppiccont">
         <div>
-        <img height = '200px' src = {props.img1}></img>
-        <img height = '200px' src = {props.img2}></img>
+        <img src = {props.img1}></img>
+        <img src = {props.img2}></img>
         </div>
       </div>
     </div>
