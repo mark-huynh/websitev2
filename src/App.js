@@ -35,7 +35,14 @@ class App extends React.Component {
         <Experience/>
       </div>
       <div className="tempcont">
+        <div className="globalContain3">
 
+      <div className = "headera">
+        <h2 className = "headerName">
+          <span className = "whiteSpace">About Me</span>
+        </h2>
+        <div className = "line"/>
+    </div>
         <ProjectLoad className = "hi" pose={this.state.isOpen
             ? 'open'
             : 'closed'}>
@@ -56,6 +63,7 @@ class App extends React.Component {
           </ProjectItem>
         </div>
         </ProjectLoad>
+            </div>
       </div>
 
       <div className = "footerdiv">

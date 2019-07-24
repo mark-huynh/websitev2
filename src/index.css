@@ -5,6 +5,7 @@
 /*GLOBAL*/
 
 
+
   /*START*/
   .start{
     height: 100vh;
@@ -71,16 +72,12 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
+
 }
 
 .globalContain{
-  /* position: absolute;
-  width: 80vw;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* align-self: flex-start; */
+  margin: auto;
 }
 
 
@@ -89,15 +86,15 @@ p{
   font-size: 150%;
 }
 
+@media (max-width: 510px){
+  body{
 
+    font-size: 100%;
+  }
+}
 
 
 .gridCont{
-  /* display: grid;
-  position: relative;
-  grid-template-columns: 1fr 1fr; */
-  /* display: flex; */
-  /* padding: 0px 100px 0 100px; */
   padding: 0 10% 0 10%;
 }
 
@@ -249,18 +246,18 @@ animation-duration: 1.5s;
 
 .expmain{
   height: 100vh;
-  position: relative;
-
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 .biggestCont{
-  /* position: absolute;
-  width: 80vw;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  margin: auto;
 }
 
+.contContainer{
+  padding: 0 10% 0 10%;
+}
 
 .contentCont {
   background-color: #282828;
@@ -281,7 +278,7 @@ animation-duration: 1.5s;
 .contentCont p{
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .exppiccont{
@@ -293,20 +290,37 @@ animation-duration: 1.5s;
   height: 200px;
 }
 
+
 @media (min-width: 1500px) {
 
-  .contentgrid{
+  /* .contentgrid{
     display: grid;
     grid-template-columns: 60% 40%;
+  } */
+
+  .contentgrid{
+    display: flex;
+    justify-content: space-between;
   }
 
-
-  .exppiccont div{
+  /* .exppiccont div{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  } */
+
+  .contentCont{
+    flex: 1;
+    flex-basis: 300px;
   }
+
+  .exppiccont{
+    flex: 1;
+    flex-basis: 30%;
+    margin-right: 5%;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -314,11 +328,15 @@ animation-duration: 1.5s;
     width: 100%;
   }
 }
-
+@media (max-width: 950px) {
+  .expmain{
+    height: 100%;
+  }
+}
 
 
 .iconbar{
-  margin: 0;
+  /* margin: 0; */
   height: 120px;
 }
 
@@ -353,12 +371,21 @@ animation-duration: 1.5s;
 
 .tempcont{
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
+  align-content: center;
+}
+
+.globalContain3{
+  margin: auto;
 }
 
 .hi{
   display: flex;
+  width: 100vw;
+  padding: 0 10% 0 10%;
+  /* margin: auto; */
   /* justify-content: space-between; */
 }
 

@@ -70,6 +70,14 @@ class Experience extends React.Component {
     return(
       <div className = "expmain">
         <div className = "biggestCont">
+         <div className = "headera">
+        <h2 className = "headerName">
+          <span className = "whiteSpace">About Me</span>
+        </h2>
+        <div className = "line"/>
+    </div>
+        <div className="contContainer">
+      
         <div className = "iconbar" onMouseEnter = {this.handleHover} onMouseLeave = {this.handleHover}>
           <div className = "iconcont">
             <img style = {{display: "inline-block"}} onClick = {() => this.handleClick(0)} height = '100px' src = "https://media.licdn.com/dms/image/C4D0BAQFQO5tUIX4Ezg/company-logo_200_200/0?e=2159024400&v=beta&t=WHLB1KdNkpUnvPHQ-SHW5kTD6BvPcC-KTrXfSVT2RD8" />
@@ -81,6 +89,7 @@ class Experience extends React.Component {
           </div>
         </div>
       </div>{this.state.component}</div>
+        </div>
     </div>
     )
   }
